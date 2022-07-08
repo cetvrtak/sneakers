@@ -14,7 +14,11 @@
 }
 
 :root {
-  --primary-color: rgb(255, 123, 20);
+  --primary-color: #ff7b14;
+
+  /* SHADES */
+  --shade-dark: ##f56a00;
+  --shade-darkest: #e06100;
 
   /* GREYS */
   --grey-darkest: #222;
@@ -116,4 +120,36 @@ body {
 
 .profile-img:hover {
   border: 3px solid var(--primary-color);
+}
+
+/* MAIN */
+.main .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9.6rem;
+  margin-bottom: 9.6rem;
+}
+
+.images {
+}
+
+.item-img {
+}
+
+.item-img--main {
+  width: 100%;
+  margin-bottom: 1.6rem;
+}
+
+.images-small {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-img:not(.item-img--main) {
+  width: 20%;
+  height: 20%;
+  border-radius: 5px;
 }
