@@ -16,6 +16,12 @@
 :root {
   --primary-color: #ff7b14;
 
+  /* TINTS */
+  --tint-darkest: #ff8b33;
+  --tint-dark: #ff9747;
+  --tint-light: #ffa35c;
+  --tint-lightest: #ffe8d6;
+
   /* SHADES */
   --shade-dark: ##f56a00;
   --shade-darkest: #e06100;
@@ -123,18 +129,16 @@ body {
 }
 
 /* MAIN */
+.main {
+  margin: 0 3.6rem;
+}
+
 .main .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 9.6rem;
   margin-bottom: 9.6rem;
-}
-
-.images {
-}
-
-.item-img {
 }
 
 .item-img--main {
@@ -152,4 +156,101 @@ body {
   width: 20%;
   height: 20%;
   border-radius: 5px;
+}
+
+.item-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.subheading {
+  text-transform: uppercase;
+  color: var(--shade-darkest);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.heading-primary {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 1.6rem;
+}
+
+.item-desc {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+}
+
+.price-box {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: start;
+  row-gap: 0.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.current-price {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.discount {
+  color: var(--shade-darkest);
+  background-color: var(--tint-lightest);
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+}
+
+.regular-price {
+  color: var(--grey-light);
+}
+
+.purchase-box {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.amount-selection {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  border-radius: 9px;
+  background-color: var(--grey-lightest);
+}
+
+.amount-change,
+.amount {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: var(--shade-darkest);
+  padding: 0.8rem;
+}
+
+.amount {
+  color: var(--grey-darkest);
+  font-size: 1.4rem;
+}
+
+.add-to-cart {
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 1.2rem;
+  padding: 0 4.8rem;
+  border-radius: 9px;
+}
+
+.btn-flex {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.btn-flex ion-icon {
+  font-size: 1.8rem;
 }

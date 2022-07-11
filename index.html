@@ -24,6 +24,7 @@
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <div class="page-box">
       <div class="the-page">
@@ -92,11 +93,20 @@
               <div class="price-box">
                 <div class="current-price">$125.00</div>
                 <div class="discount">50%</div>
-                <div class="regular-price">$250</div>
+                <div class="regular-price">$250.00</div>
               </div>
               <div class="purchase-box">
-                <div class="amount-selection">- 0 +</div>
-                <button class="add-to-cart">Add to cart</button>
+                <div class="amount-selection">
+                  <div class="amount-change">-</div>
+                  <div class="amount">0</div>
+                  <div class="amount-change">+</div>
+                </div>
+                <button class="add-to-cart">
+                  <div class="btn-flex">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <span>Add to cart</span>
+                  </div>
+                </button>
               </div>
             </div>
           </article>
