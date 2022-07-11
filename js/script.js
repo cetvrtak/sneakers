@@ -18,3 +18,18 @@ function closeModal() {
 
 btnCloseModal.addEventListener("click", closeModal);
 overlayEl.addEventListener("click", closeModal);
+
+// AMOUNT CHANGING
+var amount = 0;
+const amountDecreaseEl = document.querySelector(".amount-decrease");
+const amountIncreaseEl = document.querySelector(".amount-increase");
+const amountEl = document.querySelector(".amount");
+
+amountDecreaseEl.addEventListener("click", () => {
+  if (amount != 0) amount--;
+  amountEl.textContent = amount;
+});
+amountIncreaseEl.addEventListener("click", () => {
+  amount++;
+  amountEl.textContent = amount;
+});
