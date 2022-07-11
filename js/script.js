@@ -33,3 +33,11 @@ amountIncreaseEl.addEventListener("click", () => {
   amount++;
   amountEl.textContent = amount;
 });
+
+// IMAGE DISPLAY
+for (let i = 1; i <= 4; i++) {
+  const imgEl = document.querySelector(`.img-${i}`);
+  imgEl.addEventListener("click", () => {
+    document.querySelector(".item-img--main").src = imgEl.src;
+  });
+}

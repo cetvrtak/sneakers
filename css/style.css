@@ -143,7 +143,8 @@ body {
 }
 
 .item-img--main {
-  width: 100%;
+  width: 37rem;
+  height: 37rem;
   margin-bottom: 1.6rem;
   border-radius: 11px;
   cursor: pointer;
