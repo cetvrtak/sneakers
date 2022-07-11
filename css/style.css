@@ -145,6 +145,8 @@ body {
 .item-img--main {
   width: 100%;
   margin-bottom: 1.6rem;
+  border-radius: 11px;
+  cursor: pointer;
 }
 
 .images-small {
@@ -153,10 +155,18 @@ body {
   justify-content: space-between;
 }
 
-.item-img:not(.item-img--main) {
+.item-img-small {
   width: 20%;
   height: 20%;
-  border-radius: 5px;
+  border-radius: 11px;
+  border: 3px solid rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.item-img-small:hover {
+  border: 3px solid var(--shade-darkest);
+  opacity: 0.3;
 }
 
 .item-box {
@@ -296,7 +306,7 @@ body {
 }
 
 .modal .item-img--main {
-  border-radius: 11px;
+  cursor: auto;
 }
 
 .modal ion-icon {
@@ -310,15 +320,5 @@ body {
 }
 
 .modal .images-small {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 3.2rem 3.2rem;
-}
-
-.modal .item-img:not(.item-img--main) {
-  width: 20%;
-  height: 20%;
-  border-radius: 5px;
-  cursor: pointer;
 }
