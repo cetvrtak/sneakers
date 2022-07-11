@@ -55,6 +55,7 @@ body {
 }
 
 .the-page {
+  position: relative;
   background-color: white;
   width: 120rem;
   /* height: 75rem; */
@@ -253,4 +254,71 @@ body {
 
 .btn-flex ion-icon {
   font-size: 1.8rem;
+}
+
+/* MODAL */
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  z-index: 10;
+}
+
+.close-modal {
+  display: block;
+  margin-left: auto;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 3.6rem;
+  padding: 1.2rem 0;
+  cursor: pointer;
+}
+
+.main-img-container {
+  position: relative;
+}
+
+.modal .item-img--main {
+  border-radius: 11px;
+}
+
+.modal ion-icon {
+  position: absolute;
+  width: 6.4rem;
+  height: 6.4rem;
+  fill: white;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.modal .images-small {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.2rem 3.2rem;
+}
+
+.modal .item-img:not(.item-img--main) {
+  width: 20%;
+  height: 20%;
+  border-radius: 5px;
+  cursor: pointer;
 }
