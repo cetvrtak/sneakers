@@ -37,9 +37,33 @@ amountIncreaseEl.addEventListener("click", () => {
 });
 
 // IMAGE DISPLAY
+const modalImgMainEl = document.querySelector(".modal .item-img--main");
+
 for (let i = 1; i <= 4; i++) {
   const imgEl = document.querySelector(`.img-${i}`);
   imgEl.addEventListener("click", () => {
     document.querySelector(".item-img--main").src = imgEl.src;
   });
+  // MODAL
+  const modalImgEl = document.querySelector(`.modal-img-${i}`);
+  modalImgEl.addEventListener("click", () => {
+    modalImgMainEl.src = modalImgEl.src;
+    currentImgIndex = i;
+  });
+}
+
+var currentImgIndex = 1;
+document.querySelector(".chevron-back-circle").addEventListener("click", () => {
+  currentImgIndex = currentImgIndex == 1 ? 4 : currentImgIndex - 1;
+  displayImg(currentImgIndex);
+});
+document
+  .querySelector(".chevron-forward-circle")
+  .addEventListener("click", () => {
+    currentImgIndex = currentImgIndex == 4 ? 1 : currentImgIndex + 1;
+    displayImg(currentImgIndex);
+  });
+
+function displayImg(img) {
+  modalImgMainEl.src = `img/sneakers-${img}.png`;
 }
