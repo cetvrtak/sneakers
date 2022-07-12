@@ -38,11 +38,12 @@ amountIncreaseEl.addEventListener("click", () => {
 
 // IMAGE DISPLAY
 const modalImgMainEl = document.querySelector(".modal .item-img--main");
+const imgMainEl = document.querySelector(".item-img--main");
 
 for (let i = 1; i <= 4; i++) {
   const imgEl = document.querySelector(`.img-${i}`);
   imgEl.addEventListener("click", () => {
-    document.querySelector(".item-img--main").src = imgEl.src;
+    imgMainEl.src = imgEl.src;
   });
   // MODAL
   const modalImgEl = document.querySelector(`.modal-img-${i}`);
@@ -53,17 +54,28 @@ for (let i = 1; i <= 4; i++) {
 }
 
 var currentImgIndex = 1;
-document.querySelector(".chevron-back-circle").addEventListener("click", () => {
-  currentImgIndex = currentImgIndex == 1 ? 4 : currentImgIndex - 1;
-  displayImg(currentImgIndex);
-});
+document
+  .querySelector(".chevron-back-circle")
+  .addEventListener("click", showPreviousImg);
 document
   .querySelector(".chevron-forward-circle")
-  .addEventListener("click", () => {
-    currentImgIndex = currentImgIndex == 4 ? 1 : currentImgIndex + 1;
-    displayImg(currentImgIndex);
-  });
+  .addEventListener("click", showNextImg);
+
+const prev = document.querySelector(".main-chevron--back");
+const next = document.querySelector(".main-chevron--forward");
+prev.addEventListener("click", showPreviousImg);
+next.addEventListener("click", showNextImg);
 
 function displayImg(img) {
-  modalImgMainEl.src = `img/sneakers-${img}.png`;
+  modalImgMainEl.src = imgMainEl.src = `img/sneakers-${img}.png`;
+}
+
+function showPreviousImg() {
+  currentImgIndex = currentImgIndex == 1 ? 4 : currentImgIndex - 1;
+  displayImg(currentImgIndex);
+}
+
+function showNextImg() {
+  currentImgIndex = currentImgIndex == 4 ? 1 : currentImgIndex + 1;
+  displayImg(currentImgIndex);
 }
