@@ -340,3 +340,8 @@ body {
 .modal .images-small {
   padding: 3.2rem 3.2rem;
 }
+
+.modal .item-img--main {
+  width: 100%;
+  height: 100%;
+}
