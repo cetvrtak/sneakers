@@ -6,6 +6,8 @@ const btnCloseModal = document.querySelector(".close-modal");
 const overlayEl = document.querySelector(".overlay");
 
 function openModal() {
+  if (window.innerWidth <= 425) return;
+
   modalEl.classList.remove("hidden");
   overlayEl.classList.remove("hidden");
 }
