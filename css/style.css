@@ -143,6 +143,28 @@ body {
   margin-bottom: 9.6rem;
 }
 
+.main .main-img-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.main-chevron {
+  display: none;
+  width: 4.4rem;
+  height: 4.4rem;
+  fill: white;
+  position: absolute;
+}
+
+.main-chevron--back {
+  left: 1rem;
+}
+
+.main-chevron--forward {
+  right: 1rem;
+}
+
 .item-img--main {
   width: 37rem;
   height: 37rem;
@@ -325,7 +347,7 @@ body {
   cursor: pointer;
 }
 
-.main-img-container {
+.modal .main-img-container {
   position: relative;
 }
 
@@ -451,6 +473,10 @@ body {
     margin-bottom: 1.6rem;
     border-radius: 0px;
     cursor: default;
+  }
+
+  .main ion-icon {
+    display: block;
   }
 
   .images-small {
