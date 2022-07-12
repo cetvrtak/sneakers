@@ -37,7 +37,7 @@ html {
 }
 
 body {
-  /* background-image: url("/img/bg_img_2_16_9.jpg"); */
+  background-image: url("/img/bg_img_2_16_9.jpg");
   background-color: var(--grey-lightest);
   font-family: "Inter", sans-serif;
 }
