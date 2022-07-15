@@ -1,3 +1,5 @@
+"use strict";
+
 function displayProductDetails() {
   const name = `Article: ${localStorage.getItem("name")}`;
   const price = `Price: ${localStorage.getItem("price")}`;
