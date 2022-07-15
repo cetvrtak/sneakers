@@ -29,17 +29,11 @@ const amountEl = document.querySelector(".amount");
 
 amountDecreaseEl.addEventListener("click", () => {
   if (amount != 0) amount--;
-  amountEl.textContent = amount;
-  document.querySelector(".tooltip").textContent = `Total price: $${
-    125 * amount
-  }`;
+  updateAmount();
 });
 amountIncreaseEl.addEventListener("click", () => {
   amount++;
-  amountEl.textContent = amount;
-  document.querySelector(".tooltip").textContent = `Total price: $${
-    125 * amount
-  }`;
+  updateAmount();
 });
 
 // IMAGE DISPLAY
@@ -86,6 +80,26 @@ function showNextImg() {
   displayImg(currentImgIndex);
 }
 
+// HAMBURGER
 document.querySelector(".hamburger").addEventListener("click", () => {
   document.querySelector(".hamburger-menu").classList.toggle("hidden");
 });
+
+// STORE DATA
+localStorage.setItem(
+  "name",
+  document.querySelector(".heading-primary").textContent
+);
+localStorage.setItem(
+  "price",
+  document.querySelector(".current-price").textContent
+);
+console.log(localStorage.getItem("quantity"));
+
+function updateAmount() {
+  amountEl.textContent = amount;
+  document.querySelector(".tooltip").textContent = `Total price: $${
+    125 * amount
+  }`;
+  localStorage.setItem("quantity", amount);
+}
