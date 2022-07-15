@@ -79,3 +79,7 @@ function showNextImg() {
   currentImgIndex = currentImgIndex == 4 ? 1 : currentImgIndex + 1;
   displayImg(currentImgIndex);
 }
+
+document.querySelector(".hamburger").addEventListener("click", () => {
+  document.querySelector(".hamburger-menu").classList.toggle("hidden");
+});
