@@ -30,10 +30,16 @@ const amountEl = document.querySelector(".amount");
 amountDecreaseEl.addEventListener("click", () => {
   if (amount != 0) amount--;
   amountEl.textContent = amount;
+  document.querySelector(".tooltip").textContent = `Total price: $${
+    125 * amount
+  }`;
 });
 amountIncreaseEl.addEventListener("click", () => {
   amount++;
   amountEl.textContent = amount;
+  document.querySelector(".tooltip").textContent = `Total price: $${
+    125 * amount
+  }`;
 });
 
 // IMAGE DISPLAY
