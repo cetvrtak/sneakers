@@ -1,4 +1,5 @@
 "use strict";
+const CURRENT_PRICE = 125;
 
 const mainImageEl = document.querySelector(".item-img--main");
 const modalEl = document.querySelector(".modal");
@@ -85,16 +86,13 @@ localStorage.setItem(
   "name",
   document.querySelector(".heading-primary").textContent
 );
-localStorage.setItem(
-  "price",
-  document.querySelector(".current-price").textContent
-);
+localStorage.setItem("price", CURRENT_PRICE);
 console.log(localStorage.getItem("quantity"));
 
 function updateAmount() {
   amountEl.textContent = amount;
-  document.querySelector(".tooltip").textContent = `Total price: $${
-    125 * amount
+  document.querySelector(".tooltip").textContent = `Total: $${
+    CURRENT_PRICE * amount
   }`;
   localStorage.setItem("quantity", amount);
 }
