@@ -5,6 +5,7 @@ const mainImageEl = document.querySelector(".item-img--main");
 const modalEl = document.querySelector(".modal");
 const btnCloseModal = document.querySelector(".close-modal");
 const overlayEl = document.querySelector(".overlay");
+const addToCartEl = document.querySelector(".add-to-cart");
 
 function openModal() {
   if (window.innerWidth <= 425) return;
@@ -35,6 +36,25 @@ amountDecreaseEl.addEventListener("click", () => {
 amountIncreaseEl.addEventListener("click", () => {
   amount++;
   updateAmount();
+});
+
+// ADD TO CART
+let cart = [];
+addToCartEl.addEventListener("click", () => {
+  if (amount == 0) {
+    addToCartEl.href = "index.html";
+    alert("Select a valid quantity");
+    return;
+  }
+
+  // STORE DATA
+  cart.push(
+    document.querySelector(".heading-primary").textContent,
+    CURRENT_PRICE,
+    amount,
+    CURRENT_PRICE * amount
+  );
+  localStorage.setItem("cart", cart);
 });
 
 // IMAGE DISPLAY
@@ -80,14 +100,6 @@ function showNextImg() {
   currentImgIndex = currentImgIndex == 4 ? 1 : currentImgIndex + 1;
   displayImg(currentImgIndex);
 }
-
-// STORE DATA
-localStorage.setItem(
-  "name",
-  document.querySelector(".heading-primary").textContent
-);
-localStorage.setItem("price", CURRENT_PRICE);
-console.log(localStorage.getItem("quantity"));
 
 function updateAmount() {
   amountEl.textContent = amount;

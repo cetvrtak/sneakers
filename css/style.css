@@ -423,11 +423,22 @@ body {
 }
 
 /* CHECKOUT */
+.cart .container {
+  display: grid;
+  grid-template-columns: auto repeat(3, 1fr);
+  gap: 2.4rem;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+
+.cart-header {
+  font-size: 1.6rem;
+}
+
 .product-details {
-  display: flex;
-  flex-direction: column;
-  gap: 4.8rem;
-  font-size: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 @media (max-width: 1052px) {
