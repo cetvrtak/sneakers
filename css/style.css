@@ -166,7 +166,7 @@ body {
   color: var(--grey-lightest);
 }
 
-.main .container {
+.main > .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -430,10 +430,12 @@ body {
   align-items: center;
   justify-items: center;
   width: 100%;
+  margin-bottom: 9.6rem;
 }
 
 .cart-header {
   font-size: 1.6rem;
+  margin-bottom: 1.6rem;
 }
 
 .product-details {
@@ -528,7 +530,7 @@ body {
     margin: 0;
   }
 
-  .main .container {
+  .main > .container {
     flex-direction: column;
     gap: 0;
     margin: 0;
@@ -611,5 +613,14 @@ body {
 
   .btn-flex ion-icon {
     font-size: 2.4rem;
+  }
+
+  /* CHECKOUT */
+  .cart .container {
+    gap: 1.4rem 0.8rem;
+  }
+  .product-details {
+    font-size: 1.6rem;
+    font-weight: normal;
   }
 }

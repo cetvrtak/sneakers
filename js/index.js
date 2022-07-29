@@ -106,8 +106,7 @@ function showNextImg() {
 
 function updateAmount() {
   amountEl.textContent = amount;
-  document.querySelector(".tooltip").textContent = `Total: $${
+  document.querySelector(".tooltip").textContent = `$${(
     CURRENT_PRICE * amount
-  }`;
-  localStorage.setItem("quantity", amount);
+  ).toFixed(2)}`;
 }
