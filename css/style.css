@@ -456,23 +456,12 @@ body {
 
 @media (max-width: 829px) {
   html {
-    font-size: 40%;
-  }
-
-  .item-img--main {
-    width: 44rem;
-    height: 44rem;
-  }
-}
-
-@media (max-width: 829px) {
-  html {
     font-size: 30%;
   }
 
   .item-img--main {
-    width: 50rem;
-    height: 50rem;
+    width: 40rem;
+    height: 40rem;
   }
 }
 
