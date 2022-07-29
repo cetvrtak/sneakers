@@ -39,7 +39,10 @@ amountIncreaseEl.addEventListener("click", () => {
 });
 
 // ADD TO CART
-let cart = [];
+let cart = localStorage.getItem("cart")
+  ? localStorage.getItem("cart").split(",")
+  : [];
+
 addToCartEl.addEventListener("click", () => {
   if (amount == 0) {
     addToCartEl.href = "index.html";
